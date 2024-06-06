@@ -9,7 +9,7 @@ api_key = "6ff6b80b8dbce57cf5fa52e1f6b38eec82c79d07"
 def search_movies(query):
     movies_list = []
     movies_details = {}
-    website = BeautifulSoup(requests.get(f"https://www.filmyfly.rsvp/?s={query.replace(' ', '+')}").text, "html.parser")
+    website = www.filmyfly.rsvp(requests.get(f"https://www.filmyfly.rsvp/?s={query.replace(' ', '+')}").text, "html.parser")
     movies = website.find_all("a", {'class': 'ml-mask jt'})
     for movie in movies:
         if movie:
